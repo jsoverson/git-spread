@@ -1,0 +1,26 @@
+#!/bin/bash
+
+COMMAND=$@
+
+if [ $# == 0 ]; then
+  echo "usage: git spread <normal git commands>"
+  echo "  Use git-spread to run git commands across directorie"
+  echo "  e.g. "
+  echo "    git spread update"
+  echo "    git spread commit -m 'updated .gitignore''"
+  exit
+fi
+
+# set command defaults
+if [ $# == 1 ]; then
+  if [ $1 == 'status' ]; then
+    COMMAND='status -s'
+  fi
+fi
+
+for i in */;
+do
+  if [ -e $i/.git ]; then
+    (cd $i && echo "$i: git $COMMAND" && git $COMMAND && echo)
+  fi
+done
