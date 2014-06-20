@@ -11,7 +11,7 @@ $ git spread
 usage: git spread <normal git commands>
   Use git-spread to run git commands across directorie
   e.g.
-    git spread update
+    git spread pull
     git spread commit -m 'updated .gitignore'
 ```
 
