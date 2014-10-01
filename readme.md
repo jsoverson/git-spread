@@ -9,7 +9,7 @@ all immediate subdirectories that contain a .git directory.
 ```shell
 $ git spread
 usage: git spread <normal git commands>
-  Use git-spread to run git commands across directorie
+  Use git-spread to run git commands across directories
   e.g.
     git spread pull
     git spread commit -m 'updated .gitignore'
