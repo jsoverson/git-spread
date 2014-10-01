@@ -4,7 +4,7 @@ COMMAND=$@
 
 if [ $# == 0 ]; then
   echo "usage: git spread <normal git commands>"
-  echo "  Use git-spread to run git commands across directorie"
+  echo "  Use git-spread to run git commands across directories"
   echo "  e.g. "
   echo "    git spread pull"
   echo "    git spread commit -m 'updated .gitignore''"
